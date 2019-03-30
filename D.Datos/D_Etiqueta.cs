@@ -28,7 +28,7 @@ namespace C_Datos
 
         public bool CrearEtiqueta()
         {
-            string query = "insert into tbl_etiqueta(guia_area,fecha,hora) values (@guia,@fecha,@hora);";
+            string query = "insert into tbl_etiqueta(guia_aerea,fecha,hora) values (@guia,@fecha,@hora);";
             MySqlCommand cmd;
             try
             {

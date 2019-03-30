@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace Impresion_FCC
 {
@@ -37,9 +38,9 @@ namespace Impresion_FCC
         private void btnImprimir_Click(object sender, EventArgs e)
         {
             string guia = txtGuia.Text;
-            DateTime fecha = Convert.ToDateTime(dtpFecha.Text);
+            DateTime fecha = DateTime.ParseExact(dtpFecha.Text,"dd-MM-yyyy", CultureInfo.InvariantCulture);
             string fechaString = fecha.ToString("yyyy-MM-dd");
-            string hora = dtpHora.Text;
+            string hora = DateTime.ParseExact(dtpHora.Text, "h:mm:ss tt", CultureInfo.InvariantCulture).ToString("HH:mm:ss");
             int cant = Convert.ToInt32(txtCantidad.Text);
 
             N_Etiqueta etiqueta1 = new N_Etiqueta();
@@ -60,6 +61,9 @@ namespace Impresion_FCC
                 else
                 {
                     //Imprimir Etiqueta
+                    N_CodigoDPL codigo = new N_CodigoDPL();
+                    string substrng = etiqueta2.Guia_aerea.Substring(etiqueta2.Guia_aerea.Length-4);
+                    codigo.ImpresionCodigoBarra(substrng, etiqueta2.Fecha, etiqueta2.Hora);
                 }
             }           
         }

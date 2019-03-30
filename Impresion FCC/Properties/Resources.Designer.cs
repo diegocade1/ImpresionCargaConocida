@@ -59,5 +59,15 @@ namespace Impresion_FCC.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] RawPrinterDLL {
+            get {
+                object obj = ResourceManager.GetObject("RawPrinterDLL", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }
