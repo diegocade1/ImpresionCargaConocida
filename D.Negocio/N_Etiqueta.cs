@@ -33,5 +33,37 @@ namespace C_Negocio
                 return true;
             }
         }
+
+        public List<E_Etiqueta> ListaEtiquetasFecha(string inicio, string fin)
+        {
+            D_Etiqueta etiqueta2 = new D_Etiqueta();
+            List<E_Etiqueta> temp = new List<E_Etiqueta>();
+            temp = etiqueta2.ListaEtiquetasFecha(inicio, fin);
+            if (temp != null)
+            {
+                return temp;
+            }
+            else
+            {
+                _mensaje = etiqueta2.Mensaje;
+                return null;
+            }
+        }
+
+        public List<E_Etiqueta> ListaEtiquetasGuia(string guia)
+        {
+            D_Etiqueta etiqueta2 = new D_Etiqueta();
+            List<E_Etiqueta> temp = new List<E_Etiqueta>();
+            temp = etiqueta2.ListaEtiquetasGuia(guia);
+            if (temp != null)
+            {
+                return temp;
+            }
+            else
+            {
+                _mensaje = etiqueta2.Mensaje;
+                return null;
+            }
+        }
     }
 }

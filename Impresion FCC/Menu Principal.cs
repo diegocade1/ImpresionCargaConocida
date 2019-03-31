@@ -28,5 +28,12 @@ namespace Impresion_FCC
             frmObj.MdiParent = this;
             frmObj.Show();
         }
+
+        private void consultaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Consulta frmObj = new Consulta();
+            frmObj.MdiParent = this;
+            frmObj.Show();
+        }
     }
 }
