@@ -100,13 +100,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\C_Entidades\C_Entidades.csproj">
-      <Project>{e7564114-bc2c-467e-9111-cc3e2475315e}</Project>
-      <Name>C_Entidades</Name>
+    <ProjectReference Include="..\Entidad\Entidad.csproj">
+      <Project>{a84984c1-a474-47bd-9ee4-8bd206b5608d}</Project>
+      <Name>Entidad</Name>
     </ProjectReference>
-    <ProjectReference Include="..\D.Negocio\C_Negocio.csproj">
-      <Project>{a58253bf-5021-4ce7-92ff-aec7df0c92ee}</Project>
-      <Name>C_Negocio</Name>
+    <ProjectReference Include="..\Negocio\Negocio.csproj">
+      <Project>{ffee7b59-4057-4932-af6f-9a1bd35f5597}</Project>
+      <Name>Negocio</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace C_Negocio
+namespace Negocio
 {
     public class N_Archivo
     {

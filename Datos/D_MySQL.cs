@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace C_Datos
+namespace Datos
 {
     public class D_MySQL
     {
