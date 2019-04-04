@@ -100,9 +100,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RawPrinterDLL.dll" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Entidad\Entidad.csproj">
       <Project>{a84984c1-a474-47bd-9ee4-8bd206b5608d}</Project>
       <Name>Entidad</Name>
@@ -111,6 +108,9 @@
       <Project>{ffee7b59-4057-4932-af6f-9a1bd35f5597}</Project>
       <Name>Negocio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RawPrinterDLL.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

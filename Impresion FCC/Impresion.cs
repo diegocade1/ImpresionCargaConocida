@@ -41,7 +41,7 @@ namespace Impresion_FCC
             DateTime fecha = DateTime.ParseExact(dtpFecha.Text,"dd-MM-yyyy", CultureInfo.InvariantCulture);
             string fechaString = fecha.ToString("yyyy-MM-dd");
             //string hora = DateTime.ParseExact(dtpHora.Text, "h:mm:ss tt", CultureInfo.InvariantCulture).ToString("HH:mm:ss");
-            string hora = DateTime.ParseExact(dtpHora.Text, "h:mm:ss", CultureInfo.InvariantCulture).ToString("HH:mm:ss");
+            string hora = DateTime.ParseExact(dtpHora.Text, "HH:mm:ss", CultureInfo.InvariantCulture).ToString("HH:mm:ss");
             int cant = Convert.ToInt32(txtCantidad.Text);
 
             N_Etiqueta etiqueta1 = new N_Etiqueta();
