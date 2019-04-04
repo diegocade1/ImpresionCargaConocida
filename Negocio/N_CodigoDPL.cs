@@ -17,7 +17,7 @@ namespace Negocio
 
         public void ImpresionCodigoBarra(string guia, string fecha, string hora,string correlativo)
         {
-            Nombre_archivo = "C:\\Temp\\EtiquetaTemp.txt";
+            Nombre_archivo = @"C:\Temp\EtiquetaTemp.txt";
             archivo.Nombre_archivo = Nombre_archivo;
             impresora.Archivo = Nombre_archivo;
             impresora.NuevaImpresion();
@@ -52,7 +52,7 @@ namespace Negocio
             impresora.Grabar("1911A1000910138"+""+"CARGO NET CENTER"+"");
             impresora.Grabar("Q0001");
             impresora.Grabar("E");
-            RawPrinter.SendFileToPrinter("DatamaxDPL", Nombre_archivo);
+            RawPrinter.SendFileToPrinter(@"DatamaxDPL", Nombre_archivo);
         }
     }
 }
