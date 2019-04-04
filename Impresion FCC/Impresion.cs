@@ -35,8 +35,43 @@ namespace Impresion_FCC
 
         }
 
+        private void Limpiar()
+        {
+            dtpFecha.Format = DateTimePickerFormat.Custom;
+            dtpFecha.CustomFormat = " ";
+            dtpFecha.Format = DateTimePickerFormat.Custom;
+            dtpFecha.CustomFormat = " ";
+            txtGuia.Text = string.Empty;
+            txtCantidad.Text = string.Empty;
+        }
+
         private void btnImprimir_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtGuia.Text) || string.IsNullOrWhiteSpace(txtGuia.Text))
+            {
+                MessageBox.Show("Ingrese Guia", "Agregar");
+                return;
+            }
+            if (string.IsNullOrEmpty(dtpFecha.Text) || string.IsNullOrWhiteSpace(dtpFecha.Text))
+            {
+                MessageBox.Show("Ingrese Fecha", "Agregar");
+                return;
+            }
+            if (string.IsNullOrEmpty(dtpHora.Text) || string.IsNullOrWhiteSpace(dtpHora.Text))
+            {
+                MessageBox.Show("Ingrese Hora", "Agregar");
+                return;
+            }
+            if (txtGuia.Text.Length<4)
+            {
+                MessageBox.Show("Guia debe tener minimo 4 numeros", "Agregar");
+                return;
+            }
+            if (string.IsNullOrEmpty(txtCantidad.Text) || string.IsNullOrWhiteSpace(txtCantidad.Text))
+            {
+                MessageBox.Show("Ingrese Cantidad", "Agregar");
+                return;
+            }
             string guia = txtGuia.Text;
             DateTime fecha = DateTime.ParseExact(dtpFecha.Text,"dd-MM-yyyy", CultureInfo.InvariantCulture);
             string fechaString = fecha.ToString("yyyy-MM-dd");
@@ -64,7 +99,9 @@ namespace Impresion_FCC
                     //Imprimir Etiqueta
                     N_CodigoDPL codigo = new N_CodigoDPL();
                     string substrng = etiqueta2.Guia_aerea.Substring(etiqueta2.Guia_aerea.Length-4);
-                    codigo.ImpresionCodigoBarra(substrng, etiqueta2.Fecha, etiqueta2.Hora,etiqueta2.Correlativo.ToString());
+                    codigo.axisX = 0;
+                    codigo.axisY = 0;
+                    codigo.ImpresionCodigoBarra(substrng, fecha.ToString("dd-MM-yyyy"), etiqueta2.Hora,etiqueta2.Correlativo.ToString());
                 }
             }           
         }
