@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B0CFE14B-27D9-43F0-A48B-84E43C619F30}</ProjectGuid>
+    <ProjectGuid>{EBC55A1B-DD4B-481E-A1F7-30F996289F8D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>C_Datos</RootNamespace>
-    <AssemblyName>C_Datos</AssemblyName>
+    <RootNamespace>Datos</RootNamespace>
+    <AssemblyName>Datos</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -48,9 +48,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\C_Entidades\C_Entidades.csproj">
-      <Project>{e7564114-bc2c-467e-9111-cc3e2475315e}</Project>
-      <Name>C_Entidades</Name>
+    <ProjectReference Include="..\Entidad\Entidad.csproj">
+      <Project>{a84984c1-a474-47bd-9ee4-8bd206b5608d}</Project>
+      <Name>Entidad</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

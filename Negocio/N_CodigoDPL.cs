@@ -1,11 +1,10 @@
-﻿using RawPrinterDLL;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace C_Negocio
+namespace Negocio
 {
     public class N_CodigoDPL
     {
@@ -16,7 +15,7 @@ namespace C_Negocio
         public void ImpresionCodigoBarra(string guia, string fecha, string hora)
         {
             Nombre_archivo = "C:\\Temp\\EtiquetaTemp.txt";
-            archivo.Nombre_archivo= Nombre_archivo;
+            archivo.Nombre_archivo = Nombre_archivo;
             impresora.Archivo = Nombre_archivo;
             impresora.NuevaImpresion();
             impresora.Grabar(guia);

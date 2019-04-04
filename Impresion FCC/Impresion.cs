@@ -1,6 +1,4 @@
 ﻿using System;
-using C_Entidades;
-using C_Negocio;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
+using Negocio;
+using Entidad;
 
 namespace Impresion_FCC
 {

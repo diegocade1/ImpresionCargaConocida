@@ -1,12 +1,12 @@
-﻿using C_Entidades;
-using C_Datos;
+﻿using Datos;
+using Entidad;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace C_Negocio
+namespace Negocio
 {
     public class N_Etiqueta
     {
@@ -22,7 +22,7 @@ namespace C_Negocio
         {
             D_Etiqueta etiqueta2 = new D_Etiqueta();
             etiqueta2.Etiqueta = etiqueta1;
-            if(!etiqueta2.CrearEtiqueta())
+            if (!etiqueta2.CrearEtiqueta())
             {
                 _mensaje = etiqueta2.Mensaje;
                 return false;

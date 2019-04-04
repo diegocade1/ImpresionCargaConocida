@@ -1,4 +1,4 @@
-﻿using C_Entidades;
+﻿using Entidad;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace C_Datos
+namespace Datos
 {
     public class D_Etiqueta : D_MySQL
     {
@@ -40,7 +40,7 @@ namespace C_Datos
                     cmd.Parameters.AddWithValue("@fin", fin);
 
                     MySqlDataReader reader = cmd.ExecuteReader();
-                    if(reader.HasRows)
+                    if (reader.HasRows)
                     {
                         while (reader.Read())
                         {
@@ -135,7 +135,7 @@ namespace C_Datos
             MySqlCommand cmd;
             try
             {
-                if(Conectar())
+                if (Conectar())
                 {
                     cmd = new MySqlCommand(query, MySQLConexion);
                     cmd.Parameters.AddWithValue("@guia", _etiqueta1.Guia_aerea);
@@ -153,13 +153,13 @@ namespace C_Datos
                     return false;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 _mensaje = ex.Message;
                 Desconectar();
                 return false;
             }
-            
+
         }
 
         public int Ultimo_ID()

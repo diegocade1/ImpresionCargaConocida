@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace C_Entidades
+namespace Entidad
 {
     public class E_Etiqueta
     {
