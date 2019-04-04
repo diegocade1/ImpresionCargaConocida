@@ -12,12 +12,13 @@ namespace Negocio
         public string Nombre_archivo;
         private N_Impresion impresora = new N_Impresion();
 
-        public void ImpresionCodigoBarra(string guia, string fecha, string hora)
+        public void ImpresionCodigoBarra(string guia, string fecha, string hora,string correlativo)
         {
             Nombre_archivo = "C:\\Temp\\EtiquetaTemp.txt";
             archivo.Nombre_archivo = Nombre_archivo;
             impresora.Archivo = Nombre_archivo;
             impresora.NuevaImpresion();
+            impresora.Grabar(correlativo);
             impresora.Grabar(guia);
             impresora.Grabar(fecha);
             impresora.Grabar(hora);
