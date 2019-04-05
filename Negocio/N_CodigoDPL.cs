@@ -94,5 +94,52 @@ namespace Negocio
 
             RawPrinter.SendFileToPrinter("DatamaxDPL", Nombre_archivo);
         }
+
+        public void ImpresionCodigoBarraPrueba(string guia, string fecha, string hora, string correlativo)
+        {
+            Nombre_archivo = "C:\\Temp\\EtiquetaTemp.txt";
+            archivo.Nombre_archivo = Nombre_archivo;
+            impresora.Archivo = Nombre_archivo;
+            impresora.NuevaImpresion();
+
+            /*
+                        X     Y
+              1X11 000 0108 0173 L131001           Linea
+                 (+)    X     Y                  
+              1911 A18 0199 0096 CARGA CONOCIDA    Label
+  
+              '(+)' = Tamaño letra 
+            */
+            impresora.Grabar("n");
+            impresora.Grabar("M1477");
+            impresora.Grabar("d");
+            impresora.Grabar("L");
+            impresora.Grabar("D11");
+            impresora.Grabar("H30");
+            impresora.Grabar("R0000");
+            impresora.Grabar("ySU8");
+            impresora.Grabar("A2");
+            impresora.Grabar("1911S00"+ "0504" + "0277" + "P024P024"+correlativo);
+            impresora.Grabar("1911S0002140073P022P024CARGA CONOCIDA");
+            impresora.Grabar("1911S0001240082P018P012FECHA:");
+            impresora.Grabar("1911S0000850105P020P013HORA:");
+            impresora.Grabar("1X1100000720146L139004");
+            impresora.Grabar("1X1100001500128L193004");
+            impresora.Grabar("1X1100101120130P0010001010801300108030901120309");
+            impresora.Grabar("1X1100000500129L154023");
+            impresora.Grabar("A1");
+            impresora.Grabar("1911S0000540131P013P012"+ @"CARGO NET CENTER");
+            impresora.Grabar("A2");
+            impresora.Grabar("1911S0001210155P026P023"+fecha);
+            impresora.Grabar("A2");
+            impresora.Grabar("1911S0000830188P022P032"+hora);
+            impresora.Grabar("1911S0001530164P024P046"+guia);
+            impresora.Grabar("1911S0001850039P023P016N° DE ACREDITACION: AC 04/2019");
+            impresora.Grabar("1911S0001540043P018P012No CONTROL:");
+            impresora.Grabar("Q0001");
+            impresora.Grabar("E");
+
+            RawPrinter.SendFileToPrinter("DatamaxDPL", Nombre_archivo);
+        }
     }
 }

@@ -104,7 +104,8 @@ namespace Impresion_FCC
                     //Imprimir Etiqueta
                     N_CodigoDPL codigo = new N_CodigoDPL();
                     string substrng = etiqueta2.Guia_aerea.Substring(etiqueta2.Guia_aerea.Length-4);
-                    codigo.ImpresionCodigoBarra(substrng, fecha.ToString("dd-MM-yyyy"), etiqueta2.Hora,etiqueta2.Correlativo.ToString());
+                    //codigo.ImpresionCodigoBarra(substrng, fecha.ToString("dd-MM-yyyy"), etiqueta2.Hora, etiqueta2.Correlativo.ToString());
+                    codigo.ImpresionCodigoBarraPrueba(substrng, fecha.ToString("dd-MM-yyyy"), etiqueta2.Hora,etiqueta2.Correlativo.ToString());
                     Limpiar();
                 }
             }           
