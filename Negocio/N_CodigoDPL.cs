@@ -95,7 +95,7 @@ namespace Negocio
             RawPrinter.SendFileToPrinter("DatamaxDPL", Nombre_archivo);
         }
 
-        public void ImpresionCodigoBarraPrueba(string guia, string fecha, string hora, string correlativo)
+        public void ImpresionCodigoBarraV2(string guia, string fecha, string hora, string correlativo)
         {
             Nombre_archivo = "C:\\Temp\\EtiquetaTemp.txt";
             archivo.Nombre_archivo = Nombre_archivo;
@@ -119,7 +119,7 @@ namespace Negocio
             impresora.Grabar("R0000");
             impresora.Grabar("ySU8");
             impresora.Grabar("A2");
-            impresora.Grabar("1911S00"+ "0504" + "0277" + "P024P024"+correlativo);
+            impresora.Grabar("1911" + "A36" + "0504" + "0257" + correlativo);
             impresora.Grabar("1911S0002140073P022P024CARGA CONOCIDA");
             impresora.Grabar("1911S0001240082P018P012FECHA:");
             impresora.Grabar("1911S0000850105P020P013HORA:");

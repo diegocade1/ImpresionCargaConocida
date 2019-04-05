@@ -80,8 +80,9 @@ namespace Impresion_FCC
             DateTime fecha = dtpFecha.Value;
             string fechaString = fecha.ToString("yyyy-MM-dd");
             //string hora = DateTime.ParseExact(dtpHora.Text, "h:mm:ss tt", CultureInfo.InvariantCulture).ToString("HH:mm:ss");
-            //string hora = DateTime.ParseExact(dtpHora.Text, "HH:mm:ss", CultureInfo.InvariantCulture).ToString("HH:mm:ss");
+            //string hora = DateTime.ParseExact(dtpHora.Text, "HH:mm:ss", CultureInfo.InvariantCulture).ToString("HH:mm:ss");            
             string hora = dtpHora.Value.ToString("HH:mm:ss");
+            DateTime hora2 = dtpHora.Value;
             int cant = Convert.ToInt32(txtCantidad.Text);
 
             N_Etiqueta etiqueta1 = new N_Etiqueta();
@@ -105,7 +106,7 @@ namespace Impresion_FCC
                     N_CodigoDPL codigo = new N_CodigoDPL();
                     string substrng = etiqueta2.Guia_aerea.Substring(etiqueta2.Guia_aerea.Length-4);
                     //codigo.ImpresionCodigoBarra(substrng, fecha.ToString("dd-MM-yyyy"), etiqueta2.Hora, etiqueta2.Correlativo.ToString());
-                    codigo.ImpresionCodigoBarraPrueba(substrng, fecha.ToString("dd-MM-yyyy"), etiqueta2.Hora,etiqueta2.Correlativo.ToString());
+                    codigo.ImpresionCodigoBarraV2(substrng, fecha.ToString("dd-MM-yyyy"), hora2.ToString("HH:mm"),etiqueta2.Correlativo.ToString());
                     Limpiar();
                 }
             }           
