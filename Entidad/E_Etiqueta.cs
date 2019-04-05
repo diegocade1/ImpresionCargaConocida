@@ -12,5 +12,6 @@ namespace Entidad
         public string Guia_aerea { get; set; }
         public string Fecha { get; set; }
         public string Hora { get; set; }
+        public string Cliente { get; set; }
     }
 }

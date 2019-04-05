@@ -39,6 +39,8 @@
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.txtCliente = new System.Windows.Forms.TextBox();
+            this.lblCliente = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblImpresion
@@ -78,7 +80,7 @@
             this.lblFecha.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(94, 166);
+            this.lblFecha.Location = new System.Drawing.Point(94, 210);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(58, 20);
             this.lblFecha.TabIndex = 3;
@@ -89,7 +91,7 @@
             this.lblHora.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblHora.AutoSize = true;
             this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHora.Location = new System.Drawing.Point(104, 223);
+            this.lblHora.Location = new System.Drawing.Point(104, 267);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(48, 20);
             this.lblHora.TabIndex = 4;
@@ -101,7 +103,7 @@
             this.dtpFecha.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFecha.CustomFormat = "";
             this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFecha.Location = new System.Drawing.Point(158, 165);
+            this.dtpFecha.Location = new System.Drawing.Point(158, 209);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(200, 24);
             this.dtpFecha.TabIndex = 5;
@@ -113,7 +115,7 @@
             this.dtpHora.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpHora.CustomFormat = "hh:mm";
             this.dtpHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpHora.Location = new System.Drawing.Point(158, 223);
+            this.dtpHora.Location = new System.Drawing.Point(158, 267);
             this.dtpHora.Name = "dtpHora";
             this.dtpHora.Size = new System.Drawing.Size(200, 24);
             this.dtpHora.TabIndex = 6;
@@ -124,7 +126,7 @@
             this.lblCantidad.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblCantidad.AutoSize = true;
             this.lblCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidad.Location = new System.Drawing.Point(75, 284);
+            this.lblCantidad.Location = new System.Drawing.Point(75, 328);
             this.lblCantidad.Name = "lblCantidad";
             this.lblCantidad.Size = new System.Drawing.Size(77, 20);
             this.lblCantidad.TabIndex = 7;
@@ -134,7 +136,7 @@
             // 
             this.txtCantidad.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidad.Location = new System.Drawing.Point(158, 282);
+            this.txtCantidad.Location = new System.Drawing.Point(158, 326);
             this.txtCantidad.MaxLength = 10;
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(196, 24);
@@ -144,7 +146,7 @@
             // 
             this.btnImprimir.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImprimir.Location = new System.Drawing.Point(108, 384);
+            this.btnImprimir.Location = new System.Drawing.Point(108, 416);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(89, 32);
             this.btnImprimir.TabIndex = 9;
@@ -156,7 +158,7 @@
             // 
             this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(287, 384);
+            this.btnSalir.Location = new System.Drawing.Point(287, 416);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(89, 32);
             this.btnSalir.TabIndex = 10;
@@ -164,11 +166,34 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // txtCliente
+            // 
+            this.txtCliente.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCliente.Location = new System.Drawing.Point(158, 157);
+            this.txtCliente.MaxLength = 40;
+            this.txtCliente.Name = "txtCliente";
+            this.txtCliente.Size = new System.Drawing.Size(196, 24);
+            this.txtCliente.TabIndex = 12;
+            // 
+            // lblCliente
+            // 
+            this.lblCliente.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblCliente.AutoSize = true;
+            this.lblCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCliente.Location = new System.Drawing.Point(90, 159);
+            this.lblCliente.Name = "lblCliente";
+            this.lblCliente.Size = new System.Drawing.Size(62, 20);
+            this.lblCliente.TabIndex = 11;
+            this.lblCliente.Text = "Cliente:";
+            // 
             // Impresion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(479, 465);
+            this.ClientSize = new System.Drawing.Size(479, 497);
+            this.Controls.Add(this.txtCliente);
+            this.Controls.Add(this.lblCliente);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.txtCantidad);
@@ -202,5 +227,7 @@
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.TextBox txtCliente;
+        private System.Windows.Forms.Label lblCliente;
     }
 }

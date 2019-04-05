@@ -47,6 +47,7 @@ namespace Impresion_FCC
             dtpHora.CustomFormat = " ";
             txtGuia.Text = string.Empty;
             txtCantidad.Text = string.Empty;
+            txtCliente.Text = string.Empty;
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)
@@ -59,6 +60,11 @@ namespace Impresion_FCC
             if (txtGuia.Text.Length < 4)
             {
                 MessageBox.Show("Guia debe tener minimo 4 numeros", "Agregar");
+                return;
+            }
+            if (string.IsNullOrEmpty(txtCliente.Text) || string.IsNullOrWhiteSpace(txtCliente.Text))
+            {
+                MessageBox.Show("Ingrese Cliente", "Agregar");
                 return;
             }
             if (string.IsNullOrEmpty(dtpFecha.Text) || string.IsNullOrWhiteSpace(dtpFecha.Text))
@@ -77,6 +83,7 @@ namespace Impresion_FCC
                 return;
             }
             string guia = txtGuia.Text;
+            string cliente = txtCliente.Text;
             DateTime fecha = dtpFecha.Value;
             string fechaString = fecha.ToString("yyyy-MM-dd");
             //string hora = DateTime.ParseExact(dtpHora.Text, "h:mm:ss tt", CultureInfo.InvariantCulture).ToString("HH:mm:ss");
@@ -91,7 +98,8 @@ namespace Impresion_FCC
                 Correlativo = 0,
                 Guia_aerea = guia,
                 Fecha = fechaString,
-                Hora = hora
+                Hora = hora,
+                Cliente = cliente
             };
             for(int i = 0; i<cant;i++)
             {

@@ -85,7 +85,6 @@ namespace Impresion_FCC
 
         private void btnExportar_Click(object sender, EventArgs e)
         {
-            Type stringTypeFechaHora = typeof(DateTime);
             if (dgvLista.RowCount > 0)
             {
                 DataTable grilla = new DataTable();
@@ -101,10 +100,7 @@ namespace Impresion_FCC
                     grilla.Rows.Add();
                     foreach (DataGridViewCell cell in row.Cells)
                     {
-                        if (cell.ColumnIndex != 4)
-                        {
-                            grilla.Rows[grilla.Rows.Count - 1][cell.ColumnIndex] = cell.Value.ToString();
-                        }
+                        grilla.Rows[grilla.Rows.Count - 1][cell.ColumnIndex] = cell.Value.ToString();
                     }
                 }
 

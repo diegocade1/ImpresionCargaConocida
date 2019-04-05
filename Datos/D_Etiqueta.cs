@@ -51,6 +51,7 @@ namespace Datos
                             objeto1.Guia_aerea = Convert.ToString(reader["guia_aerea"]);
                             objeto1.Fecha = Convert.ToDateTime(reader["fecha"]).ToString("dd-MM-yyyy");
                             objeto1.Hora = Convert.ToString(reader["hora"]);
+                            objeto1.Cliente = Convert.ToString(reader["cliente"]);
 
                             temp.Add(objeto1);
                         }
@@ -102,6 +103,7 @@ namespace Datos
                             objeto1.Guia_aerea = Convert.ToString(reader["guia_aerea"]);
                             objeto1.Fecha = Convert.ToDateTime(reader["fecha"]).ToString("dd-MM-yyyy");
                             objeto1.Hora = Convert.ToString(reader["hora"]);
+                            objeto1.Cliente = Convert.ToString(reader["cliente"]);
 
                             temp.Add(objeto1);
                         }
@@ -132,7 +134,7 @@ namespace Datos
 
         public bool CrearEtiqueta()
         {
-            string query = "insert into tbl_etiqueta(guia_aerea,fecha,hora) values (@guia,@fecha,@hora);";
+            string query = "insert into tbl_etiqueta(guia_aerea,fecha,hora,cliente) values (@guia,@fecha,@hora,@cliente);";
             MySqlCommand cmd;
             try
             {
@@ -142,6 +144,7 @@ namespace Datos
                     cmd.Parameters.AddWithValue("@guia", _etiqueta1.Guia_aerea);
                     cmd.Parameters.AddWithValue("@fecha", _etiqueta1.Fecha);
                     cmd.Parameters.AddWithValue("@hora", _etiqueta1.Hora);
+                    cmd.Parameters.AddWithValue("@cliente", _etiqueta1.Cliente);
 
                     cmd.ExecuteNonQuery();
                     _etiqueta1.Correlativo = Ultimo_ID();
