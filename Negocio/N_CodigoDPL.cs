@@ -12,8 +12,8 @@ namespace Negocio
         private N_Archivo archivo = new N_Archivo();
         public string Nombre_archivo;
         private N_Impresion impresora = new N_Impresion();
-        public int axisX { get; set; }
-        public int axisY { get; set; }
+        public static int axisX { get; set; }
+        public static int axisY { get; set; }
 
         public void ImpresionCodigoBarra(string guia, string fecha, string hora,string correlativo)
         {

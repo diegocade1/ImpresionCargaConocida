@@ -75,14 +75,14 @@
             // impresionToolStripMenuItem
             // 
             this.impresionToolStripMenuItem.Name = "impresionToolStripMenuItem";
-            this.impresionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.impresionToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.impresionToolStripMenuItem.Text = "Impresion";
             this.impresionToolStripMenuItem.Click += new System.EventHandler(this.impresionToolStripMenuItem_Click);
             // 
             // consultaToolStripMenuItem
             // 
             this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
-            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.consultaToolStripMenuItem.Text = "Consulta";
             this.consultaToolStripMenuItem.Click += new System.EventHandler(this.consultaToolStripMenuItem_Click);
             // 
@@ -96,6 +96,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "mdiMenu_Principal";
             this.Text = "Menu Principal";
+            this.Load += new System.EventHandler(this.mdiMenu_Principal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

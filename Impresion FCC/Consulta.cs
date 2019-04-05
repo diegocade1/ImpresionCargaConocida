@@ -82,5 +82,46 @@ namespace Impresion_FCC
                 MessageBox.Show(etiqueta1.Mensaje);
             }
         }
+
+        private void btnExportar_Click(object sender, EventArgs e)
+        {
+            Type stringTypeFechaHora = typeof(DateTime);
+            if (dgvLista.RowCount > 0)
+            {
+                DataTable grilla = new DataTable();
+                //Pasar columnas grillas a dataTable
+                foreach (DataGridViewColumn column in dgvLista.Columns)
+                {
+                        grilla.Columns.Add(column.HeaderText, column.ValueType);
+                }
+
+                //Traspasar filas de grilla a dataTable
+                foreach (DataGridViewRow row in dgvLista.Rows)
+                {
+                    grilla.Rows.Add();
+                    foreach (DataGridViewCell cell in row.Cells)
+                    {
+                        if (cell.ColumnIndex != 4)
+                        {
+                            grilla.Rows[grilla.Rows.Count - 1][cell.ColumnIndex] = cell.Value.ToString();
+                        }
+                    }
+                }
+
+                N_Excel excel = new N_Excel();
+                if (excel.ExportarExcel(grilla))
+                {
+                    MessageBox.Show(excel.Mensaje);
+                }
+                else
+                {
+                    MessageBox.Show(excel.Mensaje);
+                }
+            }
+            else
+            {
+                MessageBox.Show("No hay datos que exportar", "Exportar");
+            }
+        }
     }
 }

@@ -36,10 +36,11 @@
             this.dtpFin = new System.Windows.Forms.DateTimePicker();
             this.btnBuscarFecha = new System.Windows.Forms.Button();
             this.panelGuia = new System.Windows.Forms.Panel();
-            this.lblGuia = new System.Windows.Forms.Label();
-            this.txtGuia = new System.Windows.Forms.TextBox();
             this.btnBuscarGuia = new System.Windows.Forms.Button();
+            this.txtGuia = new System.Windows.Forms.TextBox();
+            this.lblGuia = new System.Windows.Forms.Label();
             this.btnFiltro = new System.Windows.Forms.Button();
+            this.btnExportar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             this.panelGuia.SuspendLayout();
             this.SuspendLayout();
@@ -49,7 +50,7 @@
             this.lblConsulta.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblConsulta.AutoSize = true;
             this.lblConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConsulta.Location = new System.Drawing.Point(273, 33);
+            this.lblConsulta.Location = new System.Drawing.Point(309, 33);
             this.lblConsulta.Name = "lblConsulta";
             this.lblConsulta.Size = new System.Drawing.Size(107, 29);
             this.lblConsulta.TabIndex = 1;
@@ -67,7 +68,7 @@
             this.dgvLista.Location = new System.Drawing.Point(12, 119);
             this.dgvLista.Name = "dgvLista";
             this.dgvLista.ReadOnly = true;
-            this.dgvLista.Size = new System.Drawing.Size(658, 457);
+            this.dgvLista.Size = new System.Drawing.Size(730, 457);
             this.dgvLista.TabIndex = 2;
             // 
             // lblBuscar
@@ -122,31 +123,11 @@
             this.panelGuia.Controls.Add(this.btnBuscarGuia);
             this.panelGuia.Controls.Add(this.txtGuia);
             this.panelGuia.Controls.Add(this.lblGuia);
-            this.panelGuia.Location = new System.Drawing.Point(515, 15);
+            this.panelGuia.Location = new System.Drawing.Point(683, 11);
             this.panelGuia.Name = "panelGuia";
             this.panelGuia.Size = new System.Drawing.Size(604, 50);
             this.panelGuia.TabIndex = 8;
             this.panelGuia.Visible = false;
-            // 
-            // lblGuia
-            // 
-            this.lblGuia.AutoSize = true;
-            this.lblGuia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGuia.Location = new System.Drawing.Point(20, 17);
-            this.lblGuia.Name = "lblGuia";
-            this.lblGuia.Size = new System.Drawing.Size(43, 18);
-            this.lblGuia.TabIndex = 4;
-            this.lblGuia.Text = "Guia:";
-            // 
-            // txtGuia
-            // 
-            this.txtGuia.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtGuia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGuia.Location = new System.Drawing.Point(69, 14);
-            this.txtGuia.MaxLength = 20;
-            this.txtGuia.Name = "txtGuia";
-            this.txtGuia.Size = new System.Drawing.Size(196, 24);
-            this.txtGuia.TabIndex = 5;
             // 
             // btnBuscarGuia
             // 
@@ -159,6 +140,26 @@
             this.btnBuscarGuia.UseVisualStyleBackColor = true;
             this.btnBuscarGuia.Click += new System.EventHandler(this.btnBuscarGuia_Click);
             // 
+            // txtGuia
+            // 
+            this.txtGuia.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtGuia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGuia.Location = new System.Drawing.Point(69, 14);
+            this.txtGuia.MaxLength = 20;
+            this.txtGuia.Name = "txtGuia";
+            this.txtGuia.Size = new System.Drawing.Size(196, 24);
+            this.txtGuia.TabIndex = 5;
+            // 
+            // lblGuia
+            // 
+            this.lblGuia.AutoSize = true;
+            this.lblGuia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGuia.Location = new System.Drawing.Point(20, 17);
+            this.lblGuia.Name = "lblGuia";
+            this.lblGuia.Size = new System.Drawing.Size(43, 18);
+            this.lblGuia.TabIndex = 4;
+            this.lblGuia.Text = "Guia:";
+            // 
             // btnFiltro
             // 
             this.btnFiltro.Location = new System.Drawing.Point(24, 40);
@@ -169,11 +170,22 @@
             this.btnFiltro.UseVisualStyleBackColor = true;
             this.btnFiltro.Click += new System.EventHandler(this.btnFiltro_Click);
             // 
+            // btnExportar
+            // 
+            this.btnExportar.Location = new System.Drawing.Point(642, 67);
+            this.btnExportar.Name = "btnExportar";
+            this.btnExportar.Size = new System.Drawing.Size(87, 42);
+            this.btnExportar.TabIndex = 10;
+            this.btnExportar.Text = "Exportar a Excel";
+            this.btnExportar.UseVisualStyleBackColor = true;
+            this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
+            // 
             // Consulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(682, 588);
+            this.ClientSize = new System.Drawing.Size(754, 588);
+            this.Controls.Add(this.btnExportar);
             this.Controls.Add(this.btnFiltro);
             this.Controls.Add(this.panelGuia);
             this.Controls.Add(this.btnBuscarFecha);
@@ -208,5 +220,6 @@
         private System.Windows.Forms.Button btnBuscarGuia;
         private System.Windows.Forms.TextBox txtGuia;
         private System.Windows.Forms.Button btnFiltro;
+        private System.Windows.Forms.Button btnExportar;
     }
 }

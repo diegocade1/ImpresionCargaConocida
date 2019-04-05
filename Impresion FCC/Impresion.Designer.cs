@@ -105,6 +105,7 @@
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(200, 24);
             this.dtpFecha.TabIndex = 5;
+            this.dtpFecha.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dtpFecha_MouseDown);
             // 
             // dtpHora
             // 
@@ -116,6 +117,7 @@
             this.dtpHora.Name = "dtpHora";
             this.dtpHora.Size = new System.Drawing.Size(200, 24);
             this.dtpHora.TabIndex = 6;
+            this.dtpHora.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dtpHora_MouseDown);
             // 
             // lblCantidad
             // 

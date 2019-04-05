@@ -2,6 +2,7 @@
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -48,7 +49,7 @@ namespace Datos
 
                             objeto1.Correlativo = Convert.ToInt32(reader["correlativo"]);
                             objeto1.Guia_aerea = Convert.ToString(reader["guia_aerea"]);
-                            objeto1.Fecha = Convert.ToString(reader["fecha"]);
+                            objeto1.Fecha = Convert.ToDateTime(reader["fecha"]).ToString("dd-MM-yyyy");
                             objeto1.Hora = Convert.ToString(reader["hora"]);
 
                             temp.Add(objeto1);
@@ -99,7 +100,7 @@ namespace Datos
 
                             objeto1.Correlativo = Convert.ToInt32(reader["correlativo"]);
                             objeto1.Guia_aerea = Convert.ToString(reader["guia_aerea"]);
-                            objeto1.Fecha = Convert.ToString(reader["fecha"]);
+                            objeto1.Fecha = Convert.ToDateTime(reader["fecha"]).ToString("dd-MM-yyyy");
                             objeto1.Hora = Convert.ToString(reader["hora"]);
 
                             temp.Add(objeto1);

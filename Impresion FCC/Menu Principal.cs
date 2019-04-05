@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
+using System.Collections.Specialized;
 
 namespace Impresion_FCC
 {
@@ -34,6 +37,28 @@ namespace Impresion_FCC
             Consulta frmObj = new Consulta();
             frmObj.MdiParent = this;
             frmObj.Show();
+        }
+
+        private void mdiMenu_Principal_Load(object sender, EventArgs e)
+        {
+            N_Conexion.setConnectionString(ConfigurationManager.ConnectionStrings["MiConexion"].ConnectionString);
+            NameValueCollection settings = ConfigurationManager.GetSection("CoordenadasGroup/Coordenada") as NameValueCollection;
+
+            if (settings != null)
+            {
+                foreach (string key in settings.AllKeys)
+                {
+                    Console.Write(key + ": " + settings[key]);
+                    if(key.ToLower().Equals("x"))
+                    {
+                        N_CodigoDPL.axisX = Convert.ToInt32(settings[key]);
+                    }
+                    else
+                    {
+                        N_CodigoDPL.axisY = Convert.ToInt32(settings[key]);
+                    }
+                }
+            }
         }
     }
 }

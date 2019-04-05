@@ -25,7 +25,8 @@ namespace Datos
             bool estado = false;
             if (StringConexion.Trim() == "")
             {
-                ConexionMysql = "server = pcl-pc; user id = atc; password = 123atc; port = 3306; database = Impresion_FCC";
+                //ConexionMysql = "server = pcl-pc; user id = atc; password = 123atc; port = 3306; database = Impresion_FCC";
+                ConexionMysql = "server = localhost; user id = admin; password = 57706897; port = 3306; database = Impresion_FCC";
             }
             else
             {
