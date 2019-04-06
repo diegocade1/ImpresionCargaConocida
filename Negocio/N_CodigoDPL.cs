@@ -135,7 +135,7 @@ namespace Negocio
             impresora.Grabar("1911S0000830188P022P032"+hora);
             impresora.Grabar("1911S0001530164P024P046"+guia);
             impresora.Grabar("1911S0001850039P023P016N° DE ACREDITACION: AC 04/2019");
-            impresora.Grabar("1911S0001540043P018P012No CONTROL:");
+            impresora.Grabar("1911S0001540043P018P012N° CONTROL:");
             impresora.Grabar("Q0001");
             impresora.Grabar("E");
 
