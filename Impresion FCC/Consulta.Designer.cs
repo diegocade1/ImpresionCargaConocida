@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Consulta));
             this.lblConsulta = new System.Windows.Forms.Label();
             this.dgvLista = new System.Windows.Forms.DataGridView();
             this.lblBuscar = new System.Windows.Forms.Label();
@@ -195,6 +196,7 @@
             this.Controls.Add(this.lblBuscar);
             this.Controls.Add(this.dgvLista);
             this.Controls.Add(this.lblConsulta);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Consulta";
             this.Text = "Consulta";
             this.Load += new System.EventHandler(this.Consulta_Load);

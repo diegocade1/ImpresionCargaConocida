@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Impresion));
             this.lblImpresion = new System.Windows.Forms.Label();
             this.lblGuia = new System.Windows.Forms.Label();
             this.txtGuia = new System.Windows.Forms.TextBox();
@@ -206,6 +207,7 @@
             this.Controls.Add(this.txtGuia);
             this.Controls.Add(this.lblGuia);
             this.Controls.Add(this.lblImpresion);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Impresion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Impresion";
