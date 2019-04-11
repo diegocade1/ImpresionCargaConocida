@@ -88,7 +88,7 @@ namespace Impresion_FCC
             if (dgvLista.RowCount > 0)
             {
                 DataTable grilla = new DataTable();
-                //Pasar columnas grillas a dataTable
+                //Pasar columnas grilla a dataTable
                 foreach (DataGridViewColumn column in dgvLista.Columns)
                 {
                         grilla.Columns.Add(column.HeaderText, column.ValueType);

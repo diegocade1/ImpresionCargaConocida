@@ -103,9 +103,9 @@ namespace Negocio
             impresora.NuevaImpresion();
 
             /*
-                        X     Y
+                        Y     X
               1X11 000 0108 0173 L131001           Linea
-                 (+)    X     Y                  
+                 (+)    Y     X                  
               1911 A18 0199 0096 CARGA CONOCIDA    Label
   
               '(+)' = Tamaño letra 
@@ -119,6 +119,7 @@ namespace Negocio
             impresora.Grabar("R0000");
             impresora.Grabar("ySU8");
             impresora.Grabar("A2");
+            impresora.Grabar("1911" + "A24" + "0503" + "0155" + "F/N°:");
             impresora.Grabar("1911" + "A36" + "0504" + "0257" + correlativo);
             impresora.Grabar("1911S0002140073P022P024CARGA CONOCIDA");
             impresora.Grabar("1911S0001240082P018P012FECHA:");
