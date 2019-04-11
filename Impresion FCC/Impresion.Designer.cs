@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Impresion));
             this.lblImpresion = new System.Windows.Forms.Label();
             this.lblGuia = new System.Windows.Forms.Label();
             this.txtGuia = new System.Windows.Forms.TextBox();
@@ -62,7 +63,7 @@
             this.lblGuia.Location = new System.Drawing.Point(58, 108);
             this.lblGuia.Name = "lblGuia";
             this.lblGuia.Size = new System.Drawing.Size(94, 20);
-            this.lblGuia.TabIndex = 1;
+            this.lblGuia.TabIndex = 7;
             this.lblGuia.Text = "Guia Aérea:";
             // 
             // txtGuia
@@ -73,7 +74,7 @@
             this.txtGuia.MaxLength = 20;
             this.txtGuia.Name = "txtGuia";
             this.txtGuia.Size = new System.Drawing.Size(196, 24);
-            this.txtGuia.TabIndex = 2;
+            this.txtGuia.TabIndex = 0;
             // 
             // lblFecha
             // 
@@ -83,7 +84,7 @@
             this.lblFecha.Location = new System.Drawing.Point(94, 210);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(58, 20);
-            this.lblFecha.TabIndex = 3;
+            this.lblFecha.TabIndex = 9;
             this.lblFecha.Text = "Fecha:";
             // 
             // lblHora
@@ -94,7 +95,7 @@
             this.lblHora.Location = new System.Drawing.Point(104, 267);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(48, 20);
-            this.lblHora.TabIndex = 4;
+            this.lblHora.TabIndex = 10;
             this.lblHora.Text = "Hora:";
             // 
             // dtpFecha
@@ -106,7 +107,7 @@
             this.dtpFecha.Location = new System.Drawing.Point(158, 209);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(200, 24);
-            this.dtpFecha.TabIndex = 5;
+            this.dtpFecha.TabIndex = 2;
             this.dtpFecha.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dtpFecha_MouseDown);
             // 
             // dtpHora
@@ -118,7 +119,7 @@
             this.dtpHora.Location = new System.Drawing.Point(158, 267);
             this.dtpHora.Name = "dtpHora";
             this.dtpHora.Size = new System.Drawing.Size(200, 24);
-            this.dtpHora.TabIndex = 6;
+            this.dtpHora.TabIndex = 3;
             this.dtpHora.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dtpHora_MouseDown);
             // 
             // lblCantidad
@@ -129,7 +130,7 @@
             this.lblCantidad.Location = new System.Drawing.Point(75, 328);
             this.lblCantidad.Name = "lblCantidad";
             this.lblCantidad.Size = new System.Drawing.Size(77, 20);
-            this.lblCantidad.TabIndex = 7;
+            this.lblCantidad.TabIndex = 11;
             this.lblCantidad.Text = "Cantidad:";
             // 
             // txtCantidad
@@ -140,7 +141,8 @@
             this.txtCantidad.MaxLength = 10;
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(196, 24);
-            this.txtCantidad.TabIndex = 8;
+            this.txtCantidad.TabIndex = 4;
+            this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
             // 
             // btnImprimir
             // 
@@ -149,7 +151,7 @@
             this.btnImprimir.Location = new System.Drawing.Point(108, 416);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(89, 32);
-            this.btnImprimir.TabIndex = 9;
+            this.btnImprimir.TabIndex = 5;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.UseVisualStyleBackColor = true;
             this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
@@ -161,7 +163,7 @@
             this.btnSalir.Location = new System.Drawing.Point(287, 416);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(89, 32);
-            this.btnSalir.TabIndex = 10;
+            this.btnSalir.TabIndex = 6;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
@@ -174,7 +176,7 @@
             this.txtCliente.MaxLength = 40;
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.Size = new System.Drawing.Size(196, 24);
-            this.txtCliente.TabIndex = 12;
+            this.txtCliente.TabIndex = 1;
             // 
             // lblCliente
             // 
@@ -184,7 +186,7 @@
             this.lblCliente.Location = new System.Drawing.Point(90, 159);
             this.lblCliente.Name = "lblCliente";
             this.lblCliente.Size = new System.Drawing.Size(62, 20);
-            this.lblCliente.TabIndex = 11;
+            this.lblCliente.TabIndex = 8;
             this.lblCliente.Text = "Cliente:";
             // 
             // Impresion
@@ -205,6 +207,7 @@
             this.Controls.Add(this.txtGuia);
             this.Controls.Add(this.lblGuia);
             this.Controls.Add(this.lblImpresion);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Impresion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Impresion";

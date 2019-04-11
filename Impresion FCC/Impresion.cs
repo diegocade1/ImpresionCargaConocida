@@ -101,6 +101,7 @@ namespace Impresion_FCC
                 Hora = hora,
                 Cliente = cliente
             };
+
             for(int i = 0; i<cant;i++)
             {
                 if (!etiqueta1.CrearEtiqueta(etiqueta2))
@@ -129,6 +130,11 @@ namespace Impresion_FCC
         private void dtpHora_MouseDown(object sender, MouseEventArgs e)
         {
             dtpHora.Format = DateTimePickerFormat.Time;
+        }
+
+        private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
         }
     }
 }

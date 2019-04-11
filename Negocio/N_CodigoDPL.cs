@@ -103,13 +103,15 @@ namespace Negocio
             impresora.NuevaImpresion();
 
             /*
-                        X     Y
+                        Y     X
               1X11 000 0108 0173 L131001           Linea
-                 (+)    X     Y                  
+                 (+)    Y     X                  
               1911 A18 0199 0096 CARGA CONOCIDA    Label
   
               '(+)' = Tamaño letra 
             */
+
+            /*
             impresora.Grabar("n");
             impresora.Grabar("M1477");
             impresora.Grabar("d");
@@ -119,6 +121,7 @@ namespace Negocio
             impresora.Grabar("R0000");
             impresora.Grabar("ySU8");
             impresora.Grabar("A2");
+            impresora.Grabar("1911" + "A24" + "0504" + "0155" + "F/N°:");
             impresora.Grabar("1911" + "A36" + "0504" + "0257" + correlativo);
             impresora.Grabar("1911S0002140073P022P024CARGA CONOCIDA");
             impresora.Grabar("1911S0001240082P018P012FECHA:");
@@ -136,6 +139,37 @@ namespace Negocio
             impresora.Grabar("1911S0001530164P024P046"+guia);
             impresora.Grabar("1911S0001850039P023P016N° DE ACREDITACION: AC 04/2019");
             impresora.Grabar("1911S0001540043P018P012N° CONTROL:");
+            impresora.Grabar("Q0001");
+            impresora.Grabar("E");
+
+            */
+            impresora.Grabar("n");
+            impresora.Grabar("M1477");
+            impresora.Grabar("d");
+            impresora.Grabar("L");
+            impresora.Grabar("D11");
+            impresora.Grabar("H30");
+            impresora.Grabar("R0000");
+            impresora.Grabar("ySU8");
+            impresora.Grabar("A2");
+            impresora.Grabar("1911" + "A24" + (0504 + axisY).ToString().PadLeft(4, '0') + (0155 + axisX).ToString().PadLeft(4, '0') + "F/N°:");
+            impresora.Grabar("1911" + "A36" + (0504 + axisY).ToString().PadLeft(4, '0') + (0257 + axisX).ToString().PadLeft(4, '0') + correlativo);
+            impresora.Grabar("1911S00" + (0214 + axisY).ToString().PadLeft(4, '0') + (0073 + axisX).ToString().PadLeft(4, '0') + "P022P024"+"CARGA CONOCIDA");
+            impresora.Grabar("1911S00" + (0124 + axisY).ToString().PadLeft(4, '0') + (0082 + axisX).ToString().PadLeft(4, '0') + "P018P012"+"FECHA:");
+            impresora.Grabar("1911S00" + (0085 + axisY).ToString().PadLeft(4, '0') + (0105 + axisX).ToString().PadLeft(4, '0') + "P020P013"+"HORA:");
+            impresora.Grabar("1X11000" + (0072 + axisY).ToString().PadLeft(4, '0') + (0146 + axisX).ToString().PadLeft(4, '0') + "L139004");
+            impresora.Grabar("1X11000" + (0150 + axisY).ToString().PadLeft(4, '0') + (0128 + axisX).ToString().PadLeft(4, '0') + "L193004");
+            impresora.Grabar("1X11001" + (0112 + axisY).ToString().PadLeft(4, '0') + (0130 + axisX).ToString().PadLeft(4, '0') + "P0010001010801300108030901120309");
+            impresora.Grabar("1X11000" + (0050 + axisY).ToString().PadLeft(4, '0') + (0129 + axisX).ToString().PadLeft(4, '0') + "L154023");
+            impresora.Grabar("A1");
+            impresora.Grabar("1911S00" + (0054+ axisY).ToString().PadLeft(4, '0') + (0131 + axisX).ToString().PadLeft(4, '0') + "P013P012" + @"CARGO NET CENTER");
+            impresora.Grabar("A2");
+            impresora.Grabar("1911S00" + (0121 + axisY).ToString().PadLeft(4, '0') + (0155 + axisX).ToString().PadLeft(4, '0') + "P026P023" + fecha);
+            impresora.Grabar("A2");
+            impresora.Grabar("1911S00" + (0083 + axisY).ToString().PadLeft(4, '0') + (0188 + axisX).ToString().PadLeft(4, '0') + "P022P032" + hora);
+            impresora.Grabar("1911S00" + (0153 + axisY).ToString().PadLeft(4, '0') + (0164 + axisX).ToString().PadLeft(4, '0') + "P024P046" + guia);
+            impresora.Grabar("1911S00" + (0185 + axisY).ToString().PadLeft(4, '0') + (0039 + axisX).ToString().PadLeft(4, '0') + "P023P016"+"N° DE ACREDITACION: AC 04/2019");
+            impresora.Grabar("1911S00" + (0154 + axisY).ToString().PadLeft(4, '0') + (0043 + axisX).ToString().PadLeft(4, '0') + "P018P012"+"N° CONTROL:");
             impresora.Grabar("Q0001");
             impresora.Grabar("E");
 
