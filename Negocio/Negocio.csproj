@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="N_Archivo.cs" />
     <Compile Include="N_CodigoDPL.cs" />
+    <Compile Include="N_CodigoZPL.cs" />
     <Compile Include="N_Conexion.cs" />
     <Compile Include="N_Etiqueta.cs" />
     <Compile Include="N_Excel.cs" />
