@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Negocio
 {
-    class N_CodigoZPL
+    public class N_CodigoZPL
     {
         private N_Archivo archivo = new N_Archivo();
         public string Nombre_archivo;

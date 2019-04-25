@@ -51,11 +51,11 @@ namespace Impresion_FCC
                     Console.Write(key + ": " + settings[key]);
                     if(key.ToLower().Equals("x"))
                     {
-                        N_CodigoDPL.axisX = Convert.ToInt32(settings[key]);
+                        N_CodigoZPL.axisX = Convert.ToInt32(settings[key]);
                     }
                     else
                     {
-                        N_CodigoDPL.axisY = Convert.ToInt32(settings[key]);
+                        N_CodigoZPL.axisY = Convert.ToInt32(settings[key]);
                     }
                 }
             }
